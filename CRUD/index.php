@@ -6,22 +6,39 @@
             $telefone = $_POST['telefone'];
 
             $q = " INSERT INTO `registros` (`NOME`, `EMAIL`, `TELEFONE`) VALUES ('$name','$email','$telefone')";
-
             $query = mysqli_query($conn,$q);
         }
-
       ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CRUD PHP WM | DEV</title>
     <!-- <link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/729/PNG/96/google_icon-icons.com_62736.png" type="image/x-icon"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">    
+    <style>
+      footer{
+        height: 50px;
+        width: 100%;
+        background-color: #212529;
+        color:#fff; 
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        text-align:center;
+        align-items: center;
+        bottom: 0px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14px;
+      }
+    </style>
+
   </head>
   <body>
+   <!-- Navbar -->     
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php">CRUD PHP</a>
@@ -39,8 +56,9 @@
 </nav>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Add New Client
+        
+<button type="button" class="btn btn-primary my-2 mx-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >
+  Adicionar Cliente
 </button>
 
 <!-- Modal -->
@@ -48,7 +66,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Add New Client</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Adicionar Cliente</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -120,8 +138,12 @@
 </table>
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+     crossorigin="anonymous"></script>
   
-
+  <footer>
+    &copy;WM|DEV 2023
+  </footer>
 </body>
 </html>
